@@ -8,13 +8,13 @@ const NavItems = () => {
   const user = {
     name: "Suvendu",
     email: "suve@mail.com",
-    imageUrl: "/public/assets/images/david.webp",
+    imageUrl: "/assets/images/david.webp",
   };
   return (
     <section className="nav-items">
       <Link to="/" className="link-logo">
         <img src="/assets/icons/logo.svg" alt="logo" className="size:30px" />
-        <h2>TravelGo</h2>
+        <h2 className="">TravelGo</h2>
       </Link>
       <div className="container">
         <nav>
@@ -46,7 +46,18 @@ const NavItems = () => {
             <h2>{user?.name}</h2>
             <h2>{user?.email}</h2>
           </article>
-          <button></button>
+          <button
+            className="cursor-pointer"
+            onClick={() => {
+              console.log("Logged Out");
+            }}
+          >
+            <img
+              className="size-6"
+              src="/public/assets/icons/logout.svg"
+              alt="logout"
+            />
+          </button>
         </footer>
       </div>
     </section>
